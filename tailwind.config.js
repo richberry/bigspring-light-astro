@@ -1,4 +1,5 @@
 const theme = require("./src/config/theme.json");
+const { default: daisyui } = require('daisyui');
 
 let font_base = Number(theme.fonts.font_size.base.replace("px", ""));
 let font_scale = Number(theme.fonts.font_size.scale);
@@ -72,5 +73,9 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("tailwind-bootstrap-grid")({ generateContainer: false }),
-  ],
+    require("daisyui"),
+  ],  
+  daisyui: {
+    themes: ["light", "dark", "forest"],
+  },
 };
